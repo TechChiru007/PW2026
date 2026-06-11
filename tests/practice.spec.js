@@ -18,7 +18,7 @@ test.describe('Test Suite',()=>{
         context.waitForEvent('page'),
         blinklink.click()
     ]);
-    const ntitle=await newPage.title();
-    console.log(ntitle);
+    const newtitle=await newPage.title();
+    console.log(newtitle);
    })
 })
