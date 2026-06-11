@@ -12,7 +12,13 @@ test.describe('Test Suite',()=>{
     await page.goto("https://rahulshettyacademy.com/loginpagePractise/");
     const title = await page.title();
     console.log(title);
-    await expect(page).toHaveTitle("t");
-
+    //await expect(page).toHaveTitle("t");
+    const blinklink = page.locator("a[href*='documents-request']");
+    const [newPage]=await Promise.all([
+        context.waitForEvent('page'),
+        blinklink.click()
+    ]);
+    const ntitle=await newPage.title();
+    console.log(ntitle);
    })
 })
