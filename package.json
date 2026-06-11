@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "\"# PW2026\"",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "Test" : "npx playwright test tests/practice.spec.js",
+    "Ui" : "npx playwright test tests/practice.spec.js --ui",
+    "debug" :"npx playwright test tests/practice.spec.js --debug"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
